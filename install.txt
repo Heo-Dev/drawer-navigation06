@@ -1,0 +1,28 @@
+npm install @react-navigation/native
+npm install @react-navigation/drawer
+npm install @react-navigation/stack
+
+
+npm uninstall react-native-reanimated
+
+npm install react-native-screen react-native-safe-area-context
+
+npm install react-native-gesture-handler
+
+npm install axios
+
+
+// react bottom sheet
+npm install reanimated-bottom-sheet
+
+npm install react-native-reanimated react-native-gesture-handler
+
+
+
+
+// 참고 : gorhom bottom sheet
+npx create-expo-app sheetApp --template tabs
+cd ./sheetApp
+npx i @gorhom/bottom-sheetAfpp
+npx expo install react-native-reanimated react-native-gesture-handler
+
