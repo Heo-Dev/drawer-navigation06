@@ -22,7 +22,8 @@ const LoginScreen = () => {
     const handlePasswordChange = (text) => {
         setPassword(text);
     };
-    
+
+
     const handleSubmit = async () => {
 
         if (email.trim() === '' || password.trim() === '') {
@@ -37,11 +38,18 @@ const LoginScreen = () => {
 
 
         // axiosInstance 처리
-        const login = await axiosPost("/user/login", data);
-        setIsLogin(true);
-        setUser(login.data.user);
-        setToken(login.data.token);
-        navi.navigate('Home');
+        try{
+            const login = await axiosPost("/user/login", data);
+            console.log ("Login Success : ", login.data.result_msg);
+            setIsLogin(true);
+            setUser(login.data.data.user);
+            setToken(login.data.data.token);
+            navi.navigate('Home');
+        }catch (error){
+            // console.log('Error catched : ', error.response.status, error.message, error.response.data);
+            console.log('Error catched : ', error);
+
+        }
 
         /******************************************************************
         try {

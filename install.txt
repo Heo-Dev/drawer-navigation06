@@ -5,20 +5,32 @@ npm install @react-navigation/stack
 
 npm uninstall react-native-reanimated
 
+
+// Invariant Violation: requireNativeComponent: "RNSScreen" was not found in the UIManager.
+// 오류가 발샹하여 추가설치 함,
 npm install react-native-screen react-native-safe-area-context
+npm install react-native-screens react-native-safe-area-context
+
 
 npm install react-native-gesture-handler
 
 npm install axios
 
+npm install moment --save
+
+
 
 // react bottom sheet
 npm install reanimated-bottom-sheet
-
 npm install react-native-reanimated react-native-gesture-handler
 
+// Date Picker
+npm install react-native-date-picker
 
-
+// 년월 Picker
+npm install react-native-month-year-picker --save  
+또는
+yarn add react-native-month-year-picker
 
 // 참고 : gorhom bottom sheet
 npx create-expo-app sheetApp --template tabs
@@ -26,3 +38,25 @@ cd ./sheetApp
 npx i @gorhom/bottom-sheetAfpp
 npx expo install react-native-reanimated react-native-gesture-handler
 
+
+
+// build 에러로 순차삭제
+react-native-date-picker
+react-native-reanimated
+react-native-month-year-picker
+
+
+--------------------------------------------
+The following packages should be updated for best compatibility with the installed expo version:
+  expo@50.0.5 - expected version: ~50.0.6
+  react-native@0.73.2 - expected version: 0.73.4
+  react-native-reanimated@3.7.0 - expected version: ~3.6.2
+  react-native-safe-area-context@4.9.0 - expected version: 4.8.2
+Your project may not work correctly until you install the correct versions of the packages.
+
+
+20240216. java 버전을 jdk-17로 변경하고 build 오류가 없어짐.
+
+
+// webview
+npm i react-native-webview

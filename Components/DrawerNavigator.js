@@ -152,33 +152,33 @@ const DrawerNavigator = () => (
         <Drawer.Screen  name='Home' 
                         component={HomeScreen}  
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader />  }} />
+                                    headerTitle: () => <BplusHeader screenName={'Home'}/>  }} />
 
         <Drawer.Screen  name="Invest" 
                         component={InvestScreen} 
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'Invest'} /> }} />
 
         <Drawer.Screen  name='About' 
                         component={AboutScreen} 
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'About'} /> }} />
         <Drawer.Screen  name="Login" 
                         component={LoginScreen} 
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'Login'} /> }} />
         <Drawer.Screen  name="Regist" 
                         component={RegistScreen}
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'Regist'} /> }} />
         <Drawer.Screen  name="Mypage" 
                         component={MypageScreen}
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'Mypage'} /> }} />
         <Drawer.Screen  name="Drawer" 
                         component={StackNavigator}
                         options={{  headerShown: true, 
-                                    headerTitle: () => <BplusHeader /> }} />
+                                    headerTitle: () => <BplusHeader screenName={'Drawer'} /> }} />
     </Drawer.Navigator>
 );
 

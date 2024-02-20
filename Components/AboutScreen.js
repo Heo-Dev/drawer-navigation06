@@ -1,11 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { WebView } from 'react-native-webview';
 
 const AboutScreen = () => {
+    const { navigation } = useNavigation();
+
     return (
-        <View style={styles.container}>
-            <Text>고객센터 Screen</Text>
-        </View>
+
+        <WebView source={{ uri: 'https://benefitplus.kr/questions/create' }} style={{ flex: 1 }} mixedContentMode="always"/>
+
     );
 };
 

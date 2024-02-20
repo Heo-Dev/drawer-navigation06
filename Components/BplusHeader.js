@@ -6,14 +6,14 @@ import { AuthContext } from "../context/AuthContext";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 
-const BplusHeader = () => {
+const BplusHeader = (props) => {
 
     const navigation = useNavigation();
     const { isLogin, user, token, } = useContext(AuthContext);
 
     const Header = isLogin ? () => (
                                     <TouchableOpacity onPress={() => navigation.navigate('Mypage')} style={styles.bplus_header_btn} >
-                                        <Ionicons name="stats-chart-outline" size={22} />
+                                        <Ionicons name="stats-chart-outline" size={16} />
                                         <Text style={styles.buttonText}>마이페이지</Text>
                                     </TouchableOpacity>
                                 ) : () => (
@@ -29,7 +29,10 @@ const BplusHeader = () => {
                 <Image source={require("../assets/logo-set.png")} style={styles.bplus_header_logo} />
             </View>
             <View>
-                <Header />
+                {
+                    props.screenName !== 'Login' && props.screenName !== 'Mypage' &&
+                    <Header />
+                }
             </View>
         </View>
     );
@@ -64,10 +67,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffdb59',
         textAlign: "center",
         alignItems: 'center',
-        paddingLeft: 10,
-        paddingRight: 10,
+        paddingHorizontal: 8,
         borderRadius: 4,         
-        maxHeight: 36,
+        maxHeight: 32,
     },    
     buttonText: {
         color: '#111', 

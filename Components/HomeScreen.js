@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { WebView } from 'react-native-webview';
 
 const HomeScreen = () => {
 
@@ -8,9 +9,7 @@ const HomeScreen = () => {
 
     return (
 
-        <View style={styles.container}>
-            <Text>비플러스 홈 화면입니다.</Text>
-        </View>
+        <WebView source={{ uri: 'https://benefitplus.kr' }} style={{ flex: 1 }} mixedContentMode="always"/>
 
     );
 };
